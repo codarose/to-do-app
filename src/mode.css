@@ -28,9 +28,10 @@
 
 /* Dark Theme */
 
-.dark, .light, button {
+.dark,
+.light,
+button {
   font-family: "Josefin Sans", sans-serif;
-
 }
 /* Background */
 .dark {
@@ -55,7 +56,12 @@
 .app-header {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0px 20px 20px;
+  margin: 20px 0px 20px 0px;
+}
+
+.todo-heading {
+  color: white;
+  letter-spacing: 0.29em;
 }
 
 .flex {
@@ -83,13 +89,13 @@
   width: 100%;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+
   color: var(--dark-grayish-blue-light);
   border: none;
   height: 2rem;
   padding: 10px;
   font-size: 1.1rem;
   font-family: "Josefin Sans", sans-serif;
-
 }
 
 input:focus {
@@ -97,9 +103,16 @@ input:focus {
   outline: none;
 }
 
+.new-activity-light input:focus {
+  color: var(--very-dark-grayish-blue);
+}
+
 .new-activity-dark input {
-  color: var(--dark-grayish-blue-light);
   background: var(--very-dark-desaturated-blue);
+}
+
+.new-activity-dark input:focus {
+  color: var(--light-grayish-blue-dark);
 }
 
 .add-activity-button img {
@@ -138,7 +151,7 @@ input:focus {
   display: flex;
   border: 1px solid var(--very-light-grayish-blue);
   border-radius: 20px;
-  width: 20px;
+  min-width: 20px;
   height: 20px;
   padding: 1px;
   vertical-align: center;
@@ -324,7 +337,7 @@ input:focus {
   font-size: 1rem;
   color: var(--dark-grayish-blue-light);
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 .center-crud-buttons {
   display: flex;
@@ -347,6 +360,11 @@ input:focus {
     background-position-x: center;
     background-position-y: -8px;
     background-color: black;
+  }
+
+  .app-container {
+    max-width: 325px;
+    margin: 0 auto;
   }
 
   /* Light Theme */
@@ -407,5 +425,9 @@ input:focus {
 
   .center-crud-buttons {
     margin: 0 auto;
+  }
+
+  .todo-heading {
+    font-size: 1.8rem;
   }
 }
